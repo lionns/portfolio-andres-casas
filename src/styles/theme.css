@@ -1,0 +1,17 @@
+@theme {
+  --color-card-background: rgba(212, 187, 253, 0.2);
+  --color-card-border: rgba(212, 187, 253, 0.5);
+  --alert-red: rgba(255, 76, 76, 1);
+  --lavande-white: rgba(251, 250, 255, 1);
+  --medium-black: rgba(17, 17, 17, 0.5);
+  --color-pure-black: rgba(17, 17, 17, 1);
+  --success-green: rgba(50, 205, 50, 1);
+  --button-background: rgba(255, 215, 0, 0.2);
+  --button-border: rgba(255, 215, 0, 0.5);
+  --circles-color: linear-gradient(
+    180deg,
+    #ebd9fc 0%,
+    #9667e0 50%,
+    #0a0a52 100%
+  );
+}

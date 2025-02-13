@@ -1,0 +1,48 @@
+/* Webfont: Nohemi-Light */
+@font-face {
+  font-family: "NohemiLight";
+  src: url("../assets/fonts/nohemi/Nohemi-Light.eot"); /* IE9 Compat Modes */
+  src: url("../assets/fonts/nohemi/Nohemi-Light.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../assets/fonts/nohemi/Nohemi-Light.woff") format("woff"),
+    /* Modern Browsers */ url("../assets/fonts/nohemi/Nohemi-Light.woff2")
+      format("woff2"),
+    /* Modern Browsers */ url("../assets/fonts/nohemi/Nohemi-Light.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Nohemi-Regular */
+@font-face {
+  font-family: "Nohemi";
+  src: url("../assets/fonts/nohemi/Nohemi-Regular.eot"); /* IE9 Compat Modes */
+  src: url("../assets/fonts/nohemi/Nohemi-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../assets/fonts/nohemi/Nohemi-Regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../assets/fonts/nohemi/Nohemi-Regular.woff2")
+      format("woff2"),
+    /* Modern Browsers */ url("../assets/fonts/nohemi/Nohemi-Regular.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Nohemi-Bold */
+@font-face {
+  font-family: "NohemiBold";
+  src: url("../assets/fonts/nohemi/Nohemi-Bold.eot"); /* IE9 Compat Modes */
+  src: url("../assets/fonts/nohemi/Nohemi-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../assets/fonts/nohemi/Nohemi-Bold.woff") format("woff"),
+    /* Modern Browsers */ url("../assets/fonts/nohemi/Nohemi-Bold.woff2")
+      format("woff2"),
+    /* Modern Browsers */ url("../assets/fonts/nohemi/Nohemi-Bold.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+}
