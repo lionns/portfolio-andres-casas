@@ -1,0 +1,13 @@
+---
+interface Props {
+  flexOptions?: string;
+}
+
+const { flexOptions = "flex gap-4 items-start" } = Astro.props;
+
+const styles = `relative ${flexOptions} p-8 rounded-2xl border-[1px] border-[var(--color-card-border)] bg-[var(--color-card-background)] text-[var(--lavande-white)]`;
+---
+
+<section class={styles}>
+  <slot />
+</section>

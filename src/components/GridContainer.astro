@@ -1,0 +1,22 @@
+---
+import Card from "./Card.astro";
+import SocialButton from "./SocialButton.astro";
+import Subtitle from "./Subtitle.astro";
+---
+
+<div id="container">
+  <Card flexOptions="flex-col">
+    <Subtitle subtitle="bienvenido" />
+    <p>
+      Hola soy Andrés Felipe Casas, analista de datos especializado en Python,
+      bases de datos y limpieza de datos. Estoy aquí para ayudarte a desarrollar
+      tus proyectos.
+    </p>
+    <div class="flex gap-4">
+      <SocialButton socialName="linkedin" />
+      <SocialButton socialName="instagram" />
+      <SocialButton socialName="gitlab" />
+      <SocialButton socialName="github" />
+    </div>
+  </Card>
+</div>

@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+import LinkedInIcon from "../assets/icons/linkedin.svg";
+import InstagramIcon from "../assets/icons/instagram.svg";
+import GitLabIcon from "../assets/icons/gitlab.svg";
+import GitHubIcon from "../assets/icons/github.svg";
+
+interface Social {
+  name: string;
+  href: string;
+  icon: any;
+}
+
+interface Props {
+  socialName: keyof typeof socials;
+}
+
+const { socialName } = Astro.props;
+
+const socials: Record<string, Social> = {
+  linkedin: {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/lionns/",
+    icon: LinkedInIcon,
+  },
+  instagram: {
+    name: "Instagram",
+    href: "https://www.instagram.com/lionns_7/",
+    icon: InstagramIcon,
+  },
+  gitlab: {
+    name: "GitLab",
+    href: "#",
+    icon: GitLabIcon,
+  },
+  github: {
+    name: "GitHub",
+    href: "#",
+    icon: GitHubIcon,
+  },
+};
+---
+
+<a
+  href={socials[socialName].href}
+  target="_blank"
+  class="flex p-2 justify-center items-center gap-2.5 rounded-2xl border-[1px] border-[var(--color-card-border)] bg-[var(--color-card-background)] text-[var(--lavande-white)]"
+  ><Image src={socials[socialName].icon} alt={socials[socialName].name} /></a
+>
