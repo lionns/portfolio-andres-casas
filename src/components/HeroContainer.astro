@@ -1,0 +1,21 @@
+---
+import Card from "./Card.astro";
+import SocialButton from "./SocialButton.astro";
+import Typography from "./Typography.astro";
+---
+
+<Card flexOptions="flex-col">
+  <Typography as="h2" variant="subtitle">bienvenido</Typography>
+  <Typography as="p" variant="body" class="py-4">
+    Hola soy <Typography as="span" variant="title"
+      >Andrés Felipe Casas</Typography
+    >, analista de datos especializado en Python, bases de datos y limpieza de
+    datos. Estoy aquí para ayudarte a desarrollar tus proyectos.
+  </Typography>
+  <div class="w-full flex gap-4">
+    <SocialButton socialName="linkedin" />
+    <SocialButton socialName="instagram" />
+    <SocialButton socialName="gitlab" />
+    <SocialButton socialName="github" />
+  </div>
+</Card>

@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+import Typography from "./Typography.astro";
+import ArrowUpRight from "../assets/icons/arrow-up-right.svg";
+import ImageProjectOne from "../assets/images/project-1.png";
+import ImageProjectTwo from "../assets/images/project-2.png";
+
+interface Props {
+  projectName: string;
+  projectDescription: string;
+}
+
+const { projectName, projectDescription } = Astro.props;
+---
+
+<article class="bg-[var(--color-medium-black)] p-4 rounded-2xl my-4">
+  <div class="relative">
+    <Image
+      src={ImageProjectOne}
+      alt="Planetas"
+      class="rounded-2xl max-h-[150px] object-cover"
+    />
+    <button
+      id="project-button"
+      class="absolute bottom-2 right-2 flex p-2 justify-center items-center rounded-full bg-[var(--color-lavande-white)]"
+    >
+      <Image src={ArrowUpRight} alt="Ir al proyecto" />
+    </button>
+  </div>
+  <Typography as="h3" variant="title" class="text-xl py-4">{projectName}</Typography>
+  <Typography as="p" variant="body">{projectDescription}</Typography>
+</article>
+
+<script>
+  const projectButton = document.getElementById("project-button");
+
+  projectButton?.addEventListener("click", () => {
+    console.log("Se selecciono el botón jeje");
+  });
+</script>
