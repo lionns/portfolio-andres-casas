@@ -22,19 +22,57 @@ const { projectName, projectDescription } = Astro.props;
     />
     <button
       id="project-button"
-      class="absolute bottom-2 right-2 flex p-2 justify-center items-center rounded-full bg-[var(--color-lavande-white)]"
+      class="absolute bottom-2 right-2 flex p-2 justify-center items-center rounded-full bg-[var(--color-lavande-white)] hover:bg-gray-300 cursor-pointer"
     >
       <Image src={ArrowUpRight} alt="Ir al proyecto" />
     </button>
+    <div
+      id="project-options"
+      class="absolute bottom-15 right-2 gap-2 bg-[var(--color-medium-black)] p-2 rounded-lg shadow-lg hidden"
+    >
+      <a
+        href="#"
+        target="_blank"
+        class="bg-[var(--color-lavande-white)] text-black px-3 py-1 rounded-md text-sm hover:bg-gray-300"
+        >Ver en Live</a
+      >
+      <a
+        href="#"
+        target="_blank"
+        class="bg-[var(--color-lavande-white)] text-black px-3 py-1 rounded-md text-sm hover:bg-gray-300"
+        >Ir al repo</a
+      >
+    </div>
   </div>
-  <Typography as="h3" variant="title" class="text-xl py-4">{projectName}</Typography>
+  <Typography as="h3" variant="title" class="text-xl py-4"
+    >{projectName}</Typography
+  >
   <Typography as="p" variant="body">{projectDescription}</Typography>
 </article>
 
 <script>
-  const projectButton = document.getElementById("project-button");
+  document.addEventListener("DOMContentLoaded", () => {
+    const projectButton = document.getElementById("project-button");
+    const projectOptions = document.getElementById("project-options");
 
-  projectButton?.addEventListener("click", () => {
-    console.log("Se selecciono el botón jeje");
+    projectButton?.addEventListener("click", (event) => {
+      // event.stopPropagation(); // Evita que se cierre al hacer clic en el botón
+      projectOptions?.classList.toggle("flex");
+      projectOptions?.classList.toggle("flex-col");
+      projectOptions?.classList.toggle("hidden");
+    });
+
+    // Cerrar las opciones si se hace clic fuera de ellas
+    document.addEventListener("click", (event) => {
+      const target = event.target as Node;
+      if (
+        !projectOptions?.contains(target) &&
+        !projectButton?.contains(target)
+      ) {
+        projectOptions?.classList.remove("flex");
+        projectOptions?.classList.remove("flex-col");
+        projectOptions?.classList.add("hidden");
+      }
+    });
   });
 </script>
