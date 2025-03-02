@@ -4,16 +4,18 @@ import ProjectCard from "./ProjectCard.astro";
 import Typography from "./Typography.astro";
 ---
 
-<Card>
+<Card flexOptions="flex flex-col items-start row-span-2 gap-5">
   <Typography as="h2" variant="subtitle">proyectos</Typography>
-  <ProjectCard
-    projectName="Análisis de los planetas"
-    projectDescription="Análisis de datos planetarios para detectar patrones y predecir características de exoplanetas."
-  />
-  <ProjectCard
-    projectName="Crecimiento de plantas"
-    projectDescription="Análisis de datos para optimizar el crecimiento y salud de las plantas con robots."
-  />
+  <div class="flex flex-col md:flex-row lg:flex-col gap-4 items-start">
+    <ProjectCard
+      projectName="Análisis de los planetas"
+      projectDescription="Análisis de datos planetarios para detectar patrones y predecir características de exoplanetas."
+    />
+    <ProjectCard
+      projectName="Crecimiento de plantas"
+      projectDescription="Análisis de datos para optimizar el crecimiento y salud de las plantas con robots."
+    />
+  </div>
   <a
     class="rounded-2xl p-2 border-[1px] border-[var(--color-button-border)] bg-[var(--color-button-background)] hover:bg-[var(--color-button-background-hover)] text-[var(--color-lavande-white)]]"
     href="#">Más proyectos</a

@@ -1,5 +1,7 @@
 ---
 import AboutContainer from "./AboutContainer.astro";
+import Card from "./Card.astro";
+import CustomButton from "./CustomButton.astro";
 import HeroContainer from "./HeroContainer.astro";
 import ProjectsContainer from "./ProjectsContainer.astro";
 import TimeContainer from "./TimeContainer.astro";
@@ -9,7 +11,24 @@ import ToolsContainer from "./ToolsContainer.astro";
 <div id="container" class="p-9 grid gap-5">
   <HeroContainer />
   <ProjectsContainer />
-  <AboutContainer />
-  <ToolsContainer />
-  <TimeContainer />
+  <div class="flex flex-col gap-5 md:grid md:grid-cols-2 lg:col-span-2">
+    <AboutContainer />
+    <div class="flex flex-col gap-5">
+      <ToolsContainer />
+      <TimeContainer />
+    </div>
+  </div>
+  <div class="flex flex-col gap-5 md:grid md:grid-cols-3 md:gap-5">
+    <CustomButton
+      as="a"
+      variant="linkButton"
+      href="mailto:andrescasas@gmail.com"
+    >
+      🤝 Trabajemos juntos
+    </CustomButton>
+    <CustomButton as="a" variant="linkButton" href="#">
+      📄 Ver mi CV
+    </CustomButton>
+    <Card flexOptions="!p-4"> Actualmente trabajando como freelancer </Card>
+  </div>
 </div>

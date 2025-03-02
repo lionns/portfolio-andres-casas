@@ -1,0 +1,21 @@
+---
+import type { HTMLTag, Polymorphic } from "astro/types";
+
+type Props<Tag extends HTMLTag> = Polymorphic<{
+  as: Tag;
+  variant: keyof typeof variantClasses;
+}>;
+
+const { as: Tag, class: className, variant, ...props } = Astro.props;
+
+const variantClasses: { [key: string]: string } = {
+  linkButton:
+    "flex p-4 rounded-2xl justify-center items-center text-[var(--color-lavande-white)] bg-[var(--color-button-background)] hover:bg-[var(--color-button-background-hover)] border-[1px] border-[var(--color-button-border)]",
+};
+
+const classes = [variantClasses[variant], className];
+---
+
+<Tag class:list={classes} {...props}>
+  <slot />
+</Tag>
