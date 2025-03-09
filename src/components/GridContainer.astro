@@ -8,27 +8,28 @@ import TimeContainer from "./TimeContainer.astro";
 import ToolsContainer from "./ToolsContainer.astro";
 ---
 
-<div id="container" class="p-9 grid gap-5">
+<div id="container" class="p-9 grid lg:grid-cols-[1fr_2fr_0.75fr_1.75fr] lg:grid-rows-5 gap-5 lg:max-w-[1192px] m-auto">
   <HeroContainer />
   <ProjectsContainer />
-  <div class="flex flex-col gap-5 md:grid md:grid-cols-2 lg:col-span-2">
+  <div class="flex flex-col gap-5 md:grid md:grid-cols-2 lg:grid-cols-[0.90fr_1fr] lg:col-span-2 lg:row-span-3">
     <AboutContainer />
-    <div class="flex flex-col gap-5">
+    <div class="flex flex-col gap-5 flex-1">
       <ToolsContainer />
       <TimeContainer />
     </div>
   </div>
-  <div class="flex flex-col gap-5 md:grid md:grid-cols-3 md:gap-5">
+  <div class="flex flex-col gap-5 md:grid md:grid-cols-3 md:gap-5 lg:row-span-3 lg:flex lg:flex-col lg:justify-between">
     <CustomButton
       as="a"
       variant="linkButton"
       href="mailto:andrescasas@gmail.com"
+      class="flex-1"
     >
       🤝 Trabajemos juntos
     </CustomButton>
-    <CustomButton as="a" variant="linkButton" href="#">
+    <CustomButton as="a" variant="linkButton" href="#" class="flex-1">
       📄 Ver mi CV
     </CustomButton>
-    <Card flexOptions="!p-4"> Actualmente trabajando como freelancer </Card>
+    <Card flexOptions="!p-4 flex-0.5"> Actualmente trabajando como freelancer </Card>
   </div>
 </div>

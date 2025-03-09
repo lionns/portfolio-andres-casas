@@ -1,11 +1,11 @@
 ---
 import Card from "./Card.astro";
 import Typography from "./Typography.astro";
-import ToolsImage from "../assets/images/tools.png";
+import ToolsImage from "../assets/images/tools.svg";
 import { Image } from "astro:assets";
 ---
 
-<Card>
+<Card flexOptions="flex flex-col gap-4 items-start flex-1">
   <Typography as="h2" variant="subtitle">herramientas y lenguajes</Typography>
-  <Image src={ToolsImage} alt="Herramientas y lenguajes" class="w-full" />
+  <Image src={ToolsImage} alt="Herramientas y lenguajes" class="w-full lg:absolute lg:inset-0 lg:top-[30%]" />
 </Card>
